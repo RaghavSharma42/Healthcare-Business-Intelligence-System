@@ -66,6 +66,15 @@ group by doctors.first_name,
     doctors.doctor_id
 order by revenue desc limit 3;
 
+-- Q.What is the average treatment cost for each treatment type?
+
+select*from treatments;
+
+select treatment_name , round(avg(cost),2) as average_cost
+from treatments
+group by treatment_name
+order by average_cost desc;
+
 
 	
 	

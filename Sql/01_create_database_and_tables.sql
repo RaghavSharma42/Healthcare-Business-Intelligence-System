@@ -71,12 +71,10 @@ CREATE TABLE billing (
     treatment_id varchar(10),
     bill_date DATE,
     amount decimal(10,2),
-    ayment_method VARCHAR(50),
+    payment_method VARCHAR(50),
 	payment_status VARCHAR(20),
 
 	FOREIGN KEY (patient_id) REFERENCES patients(patient_id),
 	FOREIGN KEY (treatment_id) REFERENCES treatments(treatment_id)
 );
-
-
 
